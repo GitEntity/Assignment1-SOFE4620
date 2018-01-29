@@ -35,7 +35,48 @@ deactivate
 
 ![VENV Interpreter Setup](img/pycharm-venv.png)
 
-# Run Project
+# Code Required (available in repository)
+
+##setup.py
+try:
+    from setuptools import setup, find_packages
+except ImportError:
+    from distutils.core import setup
+
+config = {
+    'description': 'This package is used for scraping sports analytics data from the foot-data API to provide football'
+                   'data of all major european in a machine-readable way.',
+    'author': 'Devante Wilson',
+    'author_email': 'devante.wilson@outlook.com',
+    'version': '0.0.1',
+    'packages': find_packages(),
+    'name': 'soccer_package'
+}
+
+setup(**config)
+
+##connect.py
+# Author: Devante Wilson
+# Date: 7/28/2018
+# Description: Connect to the API site in order to scrape data intended for writing to .csv file.
+import http.client
+import json
+import pandas as pd
+
+# setup the connection to the api site
+connection = http.client.HTTPConnection('api.football-data.org')
+headers = { 'X-Auth-Token': '49545ccc5fa148e889e3cc4a7f7d6113', 'X-Response-Control': 'minified' }
+connection.request('GET', '/v1/competitions/446/leagueTable', None, headers )
+# read and decode the json data in the response
+response = json.loads(connection.getresponse().read().decode())
+
+# output the list to the console
+print(response)
+
+# write DataFrame to a comma seperated values (csv) file
+data = pd.DataFrame(response)
+data.to_csv('PremierLeague.csv', index=False)
+
 - use configurations created in PyCharm for `connect.py'
 - to run, click the green arrow button besides the dropdown used for configuration
 
