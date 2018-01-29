@@ -37,7 +37,8 @@ deactivate
 
 # Code Required (available in repository)
 
-##setup.py
+setup.py
+```
 try:
     from setuptools import setup, find_packages
 except ImportError:
@@ -54,8 +55,9 @@ config = {
 }
 
 setup(**config)
-
-##connect.py
+```
+connect.py
+```
 # Author: Devante Wilson
 # Date: 7/28/2018
 # Description: Connect to the API site in order to scrape data intended for writing to .csv file.
@@ -76,11 +78,14 @@ print(response)
 # write DataFrame to a comma seperated values (csv) file
 data = pd.DataFrame(response)
 data.to_csv('PremierLeague.csv', index=False)
+```
 
 - use configurations created in PyCharm for `connect.py'
 - to run, click the green arrow button besides the dropdown used for configuration
 
 ![Run](img/run.png)
+
+For other soccer data resources: http://api.football-data.org/documentation
 
 - to debug, click on the green sun icon
 
