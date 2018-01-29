@@ -37,7 +37,7 @@ deactivate
 
 # Code Required (available in repository)
 
-setup.py
+_setup.py_
 ```
 try:
     from setuptools import setup, find_packages
@@ -45,8 +45,8 @@ except ImportError:
     from distutils.core import setup
 
 config = {
-    'description': 'This package is used for scraping sports analytics data from the foot-data API to provide football'
-                   'data of all major european in a machine-readable way.',
+    'description': 'This package is used for scraping sports analytics data from the foot-data API to provide
+                   'football data of all major european in a machine-readable way.',
     'author': 'Devante Wilson',
     'author_email': 'devante.wilson@outlook.com',
     'version': '0.0.1',
@@ -56,7 +56,7 @@ config = {
 
 setup(**config)
 ```
-connect.py
+_connect.py_
 ```
 # Author: Devante Wilson
 # Date: 7/28/2018
