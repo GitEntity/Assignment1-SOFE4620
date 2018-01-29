@@ -37,7 +37,7 @@ deactivate
 
 # Code Required (available in repository)
 
-_setup.py_
+**__setup.py__**
 ```
 try:
     from setuptools import setup, find_packages
@@ -56,7 +56,7 @@ config = {
 
 setup(**config)
 ```
-_connect.py_
+**_connect.py__**
 ```
 # Author: Devante Wilson
 # Date: 7/28/2018
