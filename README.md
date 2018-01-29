@@ -4,7 +4,7 @@ Repository to hold SOFE 4620 project template that uses python and windows in a 
 # Setup
 - [Windows](#windows-setup)
 - [Pycharm Setup](#pycharm-ide-setup)
-- [Running Project](#run-project)
+- [Running Project](#Code Required (available in repository))
 
 # Windows Setup
 - Install git [if not already installed](https://git-scm.com/download/win)
