@@ -19,6 +19,8 @@ git clone https://github.com/GitEntity/Assignment1-SOFE4620
 
 - Install dependencies *run in cmd as admin in project folder*
 - More documentation on [venv](http://docs.python-guide.org/en/latest/dev/virtualenvs/)
+
+**__To create a requirements.txt file:__** pip freeze > requirements.txt
 ```
 pip install virtualenv virtualenvwrapper
 virtualenv venv
